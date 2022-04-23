@@ -1,0 +1,12 @@
+[Unit]
+Description=Fotobox Pedal
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/pi/fotobox/foto_button.py
+Restart=on-abort
+User=pi
+
+[Install]
+WantedBy=multi-user.target
